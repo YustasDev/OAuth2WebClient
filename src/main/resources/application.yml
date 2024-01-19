@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndDES
+    password: ${ENCRYPTION_PASSWORD}
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+
+
+#  GitHub  login
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: ENC(Geq7jjhLMFsKLoKGjFG9GIvzIlMbBXKO+l2TYwy2D1o=)
+            client-secret: ENC(Fr2KjX8LSI5lkMJI9yK1U+3rbRBVEm/3t3ap6qDkwHjHWrjR7cwLLijgN9JjLl3S0s6n6ltfdio=)
+            #authorization-grant-type: client_credentials
+
+#        provider:
+#          xioma_webclient:
+#            issuer-uri: http://localhost:8080/realms/myrealm
+#            token-uri: http://localhost:8080/realms/myrealm/protocol/openid-connect/token
+
